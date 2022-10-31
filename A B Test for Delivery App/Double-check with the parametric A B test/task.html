@@ -1,0 +1,37 @@
+<html><body><h5 id="description">Description</h5>
+<p>An alternative approach to testing hypotheses when your variables are skewed is to transform them and conduct a <strong>parametric test</strong>. Apply the <strong>log transformation</strong> to the target variable and conduct the parametric hypothesis test to see the difference in the average order value for both control and experimental groups. Is the conclusion on the null hypothesis similar to the one from the previous stage?</p>
+<h5 id="objectives">Objectives</h5>
+<p>Use the dataset with removed outliers according to stage 3.</p>
+<ul>
+<li>Apply <a href="https://www.youtube.com/watch?v=eJF9hiv3c-A&amp;ab_channel=zedstatistics" rel="noopener noreferrer nofollow" target="_blank">log transformation</a> to order value to make it normal and plot the new distribution;</li>
+<li>Similar to the first stage, conduct the t-test on the transformed data:</li>
+</ul>
+<ol>
+<li>Сheck the assumption for the equality of variances using Levene's test. Print the test statistic, p-value, and conclude the null hypothesis (<code class="java">Reject null hypothesis: yes</code> or <code class="java">no</code>) and variances (<code class="java">Variances are equal: yes</code> or <code class="java">no</code>);</li>
+<li>Based on the results of Levene's test, apply the t-test on the independent samples with equal or unequal variances. Print the test statistic and p-value, conclude the null hypothesis (<code class="java">Reject null hypothesis: yes</code> or <code class="java">no</code>) and whether group means are equal or not (<code class="java">Means are equal: yes</code> or <code class="java">no</code>).</li>
+</ol>
+<p></p><div class="alert alert-warning">Your program must follow the format in the Examples section: first, a histogram, and the test results afterwards. Note that there are only two options: <code class="java">p-value &gt; 0.05</code> or <code class="java">p-value &lt;= 0.05</code>.</div><p></p>
+<p>You're already familiar to <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.levene.html" rel="noopener noreferrer nofollow" target="_blank">Levene's test</a> and <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html" rel="noopener noreferrer nofollow" target="_blank">t-test</a> from SciPy. Based on the result of Levene's test set <code class="java">equal_var</code> in t-test. Other parameters remain default.</p>
+<h5 id="examples">Examples</h5>
+<p><strong>Example 1:</strong></p>
+<p><img alt="" height="288" name="example1_plot_stage5.png" src="https://ucarecdn.com/4aa1b997-0b8d-4d37-8ede-333aef8d0f27/" width="432"/></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 0.043, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = -2.262, p-value &gt; 0.05
+Reject null hypothesis: no
+Means are equal: yes</code></pre>
+<p><strong>Example 2:</strong></p>
+<p><img alt="" height="288" name="example2_plot_stage5.png" src="https://ucarecdn.com/55b204d1-3b3a-489f-8582-08a54e4175c9/" width="432"/></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 1.081, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = -2.101, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Means are equal: no</code></pre></body></html>

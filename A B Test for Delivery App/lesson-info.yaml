@@ -1,0 +1,8 @@
+type: framework
+content:
+- Sampling strategy
+- Sample size calculation
+- Know your clients
+- Non-parametric A B test
+- Double-check with the parametric A B test
+current_task: 4

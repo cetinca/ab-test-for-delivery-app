@@ -1,0 +1,57 @@
+<html><body><h5 id="description">Description</h5>
+<p>After collecting feedback from users, the product team suggested several changes to the menu page of the company app. The UX and UI designers developed a new menu interface that shows the most popular items at the top of the page. You, as an analyst, need to investigate a possible increase in the average order value (AOV) with a new app design. In other words, you need <a href="https://towardsdatascience.com/hypothesis-testing-for-a-b-test-an-application-of-inferential-statistics-5ae2e779ff04" rel="noopener noreferrer nofollow" target="_blank">to conduct the <strong>A/B test</strong></a>. </p>
+<p>The product manager calculated the traffic size for the experiment and suggested the sample sizes. Your task is to check whether a sample with the specified size can adequately reflect the outcome before committing any design changes. Take two samples of a particular size and assess whether they contain significant statistical differences. In other words, conduct the so-called A/A test to check that the parameters, i.e. the sample sizes, of the experiment will produce a statistically fair result. </p>
+<h5 id="objectives">Objectives</h5>
+<p>Download <a href="https://stepik.org/media/attachments/lesson/564554/aa_test.csv" rel="noopener noreferrer nofollow" target="_blank">a file with the dataset</a> and save it to your working directory. Check if the mean order value is equal in both samples. For this, you need to do the following:</p>
+<ul>
+<li>Treating the order value as normal-distributed, conduct <a href="https://machinelearningmastery.com/statistical-hypothesis-tests/" rel="noopener noreferrer nofollow" target="_blank">a hypothesis test</a> to check the assumption for the equality of variances. Apply <a href="https://medium.com/@kyawsawhtoon/levenes-test-the-assessment-for-equality-of-variances-94503b695a57" rel="noopener noreferrer nofollow" target="_blank">Levene's test</a>. Print the test statistic rounded to the third decimal place and p-value. Make a conclusion of the null hypothesis (<code class="java">Reject null hypothesis: yes</code> or <code class="java">no</code>) and variances (<code class="java">Variances are equal: yes</code> or <code class="java">no</code>).</li>
+<li>Based on the results of Levene's test, apply the <a href="https://www.youtube.com/watch?v=pTmLQvMM-1M&amp;ab_channel=BozemanScience" rel="noopener noreferrer nofollow" target="_blank">t-test</a> to the independent samples with equal/unequal variances. Show the test statistic rounded to the third decimal place and p-value, conclude the null hypothesis ( <code class="java">Reject null hypothesis: yes</code> or <code class="java">no</code>) and whether the group means are equal or not (<code class="java">Means are equal: yes</code> or <code class="java">no</code>).</li>
+</ul>
+<p>To fine-tune your knowledge of statistical testing we highly recommend a set of 3 min videos on <a href="https://www.youtube.com/playlist?list=PLRKtJ4IpxJpBxX2S9wXJUhB1_ha3ADFpF" rel="noopener noreferrer nofollow" target="_blank">stat thinking by Cassie Kozyrkov</a>🚀</p>
+<p></p><div class="alert alert-warning">Your program must follow the format shown in the Example section. Note that there are only two options: <code class="java">p-value &gt; 0.05</code> or <code class="java">p-value &lt;= 0.05</code>.</div><p></p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-3115').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-3115" style="display:none;">You may want to use implementations of <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.levene.html" rel="noopener noreferrer nofollow" target="_blank">Levene's test</a> and <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html" rel="noopener noreferrer nofollow" target="_blank">t-test</a> from SciPy. Based on the result of Levene's test set <code class="java">equal_var</code> in t-test. Other parameters remain default.</div>
+<h5 id="examples">Examples</h5>
+<p><strong>Example 1:</strong></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 0.084, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = 0.205, p-value &gt; 0.05
+Reject null hypothesis: no
+Means are equal: yes
+</code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 0.185, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = -13.956, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Means are equal: no</code></pre>
+<p><strong>Example 3:</strong></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 64.439, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Variances are equal: no
+
+T-test
+t = 0.723, p-value &gt; 0.05
+Reject null hypothesis: no
+Means are equal: yes</code></pre>
+<p><strong>Example 4:</strong></p>
+<pre><code class="language-no-highlight">Levene's test
+W = 62.241, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Variances are equal: no
+
+T-test
+t = 10.569, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Means are equal: no</code></pre></body></html>

@@ -1,0 +1,27 @@
+<html><body><h5 id="description">Description</h5>
+<p>In this stage, you need to test a statistical hypothesis and establish whether the average order value (AOV) has changed after switching to the new design. As you may have noticed earlier, the order value is not distributed normally. Let's try to apply a <strong>non-parametric<em> </em>test</strong> and interpret the results. Since non-parametric tests require fewer observations, the sample prepared in the previous stage is suitable for hypothesis testing in this stage.</p>
+<p>What is the best way to present the A/B testing results to the members of your team who are not familiar with the basics of statistical inference? Is the interface in the experimental group better than in the control one AOV-wise? How sure are you about the results? Share your thoughts in the comments!</p>
+<h5 id="objectives">Objectives</h5>
+<p>Use the dataset with removed outliers from the previous stage. Test the hypothesis with <a href="https://www.youtube.com/watch?v=Twk6lBhBl88" rel="noopener noreferrer nofollow" target="_blank">Mann-Whitney U test</a> and print:</p>
+<ul>
+<li>The test statistic for the control group (<code class="java">U1</code>).</li>
+<li>The p-value.</li>
+<li>The conclusion on the null hypothesis (<code class="java">Reject null hypothesis: yes</code> or <code class="java">no</code>).</li>
+<li>Conclusion on whether the underlying distribution of the control group is the same as the experimental one (<code class="java">Distributions are same: yes</code> or <code class="java">no</code>).</li>
+</ul>
+<p></p><div class="alert alert-warning">Your program must follow the format shown in the Example section. Choose the level of significance of <span class="math-tex">\(0.05\)</span>. Note that there are only two options: <code class="java">p-value &gt; 0.05</code> or <code class="java">p-value &lt;= 0.05</code>.</div><p></p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-1758').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-1758" style="display:none;">To conduct the test try out the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html" rel="noopener noreferrer nofollow" target="_blank">scipy.stats.mannwhitneyu()</a> function from the <code class="java">SciPy</code> module.</div>
+<h5 id="examples">Examples</h5>
+<p><strong>Example 1:</strong></p>
+<pre><code class="language-no-highlight">Mann-Whitney U test
+U1 = 4026.0, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Distributions are same: no</code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code class="language-no-highlight">Mann-Whitney U test
+U1 = 17.0, p-value &gt; 0.05
+Reject null hypothesis: no
+Distributions are same: yes</code></pre></body></html>

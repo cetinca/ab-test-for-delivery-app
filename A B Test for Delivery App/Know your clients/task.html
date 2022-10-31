@@ -1,0 +1,33 @@
+<html><body><h5 id="description">Description</h5>
+<p>Hooray! We have enough data. Now, let's take a closer look at our users. In this stage, you need to perform a small <strong>exploratory data analysis</strong> (EDA). You may have noticed that some sessions took longer, and the value of their orders was higher than usual. These observations are not adequate; they may bias the test results. </p>
+<p>How can we spot the outliers? Perhaps, someone started ordering food, got a phone call, and left the page open. The session lasted unusually long. Another case is when a user has a sudden party and orders food for ten friends through our service. This is an "emergency", so this order with the higher value accidentally falls into the sample. Suggest other possible explanations for outliers in the comments!</p>
+<h5 id="objectives">Objectives</h5>
+<ul>
+<li>For the control and experimental groups separately, plot:</li>
+</ul>
+<ol>
+<li>Number of sessions by day of the month to check if there is a seasonality effect;</li>
+<li>Order value distribution (the <code class="java">order_value</code>column) with a histogram;</li>
+<li>Session duration distribution (the <code class="java">session_duration</code> column) with a histogram.</li>
+</ol>
+<ul>
+<li>Remove the outliers based on the order value and session duration distributions. In our case, we are concerned about observations above the 99th percentile of the whole distribution (both test and experimental groups). We can consider them as outliers for both variables. Print the new mean, standard deviation, and maximum of the order value variable. Round all numbers to two decimal places.</li>
+</ul>
+<p></p><div class="alert alert-warning">Your program must follow the format shown in the Example section.</div><p></p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong></p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-1778').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-1778" style="display:none;">Use <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html" rel="noopener noreferrer nofollow" target="_blank">pandas.DataFrame.plot</a> with the right <code class="java">kind</code> parameter.</div>
+<p><img alt="" height="399" name="dates_stage3.png" src="https://ucarecdn.com/84112c04-3b4d-4a4e-b502-c58e7f438c1a/" width="579"/></p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-2125').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-2125" style="display:none;">For the last two images (two subplots in each) give <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.hist.html" rel="noopener noreferrer nofollow" target="_blank">pandas.DataFrame.hist</a> a try. Your task is to find a parameter that groups data by a specified column to show two subplots.</div>
+<p><img alt="" height="425" name="order_value_stage3.png" src="https://ucarecdn.com/01dfbabb-bf76-4764-880d-481579d71f99/" width="582"/></p>
+<p> </p>
+<p><img alt="" height="423" name="session_duration_stage3.png" src="https://ucarecdn.com/b9fd4543-3452-450d-9010-20aa6d6cceaf/" width="569"/></p>
+<pre><code class="language-no-highlight">Mean: 14.26
+Standard deviation: 4.89
+Max: 30.94</code></pre></body></html>

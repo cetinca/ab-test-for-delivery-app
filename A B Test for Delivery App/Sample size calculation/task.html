@@ -1,0 +1,21 @@
+<html><body><h5 id="description">Description</h5>
+<p>The A/A test showed a statistically significant difference in the average order value in the two groups. It means that the sampling procedure was incorrect or the group size was too small. The product team had no bias in the sampling — it was random. You should calculate the new sample size that will be sufficient to detect the minimum statistically significant difference.</p>
+<h5 id="objectives">Objectives</h5>
+<ul>
+<li>
+<p>Perform <a href="https://machinelearningmastery.com/statistical-power-and-power-analysis-in-python/" rel="noopener noreferrer nofollow" target="_blank">a power analysis</a> with the effect of <span class="math-tex">\(0.2\)</span>, the power of <span class="math-tex">\(0.8\)</span> and the significance level of <span class="math-tex">\(0.05\)</span> to estimate the sample size of one group. Round the results up to the next hundred. For instance, if a sample size was 657, you would submit 700. Control and experimental groups are supposed to be equal;</p>
+</li>
+<li>
+<p>Download <a href="https://stepik.org/media/attachments/lesson/564554/ab_test.csv" rel="noopener noreferrer nofollow" target="_blank">new dataset</a> and count the number of sessions in the control and experimental groups (the <code class="java">group</code> column).</p>
+</li>
+</ul>
+<p></p><div class="alert alert-warning">Your program must follow the format shown in the Example section.</div><p></p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-1381').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-1381" style="display:none;">We recommend you to try the <a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.power.tt_ind_solve_power.html" rel="noopener noreferrer nofollow" target="_blank">statsmodels.stats.power.tt_ind_solve_power()</a> method to complete this stage.</div>
+<h5 id="example">Example</h5>
+<pre><code class="language-no-highlight">Sample size: 600  # it is the result of power analysis
+
+Control group: 598
+Experimental group: 601</code></pre></body></html>
